@@ -19,4 +19,4 @@
 > 3. Osvaldo Renato	Luzuriaga Luzuriaga; Correo: or.luzuriaga@alumnos.urjc.es; Cuenta GitHub: orluzuriaga
 >
 > ## Tablero Trello
->  Enlace al [Tablero BuyCars:] (https://trello.com/invite/b/89zXO16r/06b870b346ef37954a5d89b8330a5326/sistemas-distribuidos)
+>  Enlace al [Tablero BuyCars] (https://trello.com/invite/b/89zXO16r/06b870b346ef37954a5d89b8330a5326/sistemas-distribuidos)
