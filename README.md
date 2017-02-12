@@ -8,10 +8,10 @@
 >
 > ## Nombre y descripcion de cada entidad
 > -Coche: cada entidad coche se identifica con marca, modelo, año matriculación, Km y precio<br/>
-> -Categoria: consta de coches de segunda manos, km0 y nuevo
-> -Usuario: nombre, direccción, email, telefono
-> -Compra: coche, usuario, pagar, contacto
-> -Venta: coche, usuario, contacto
+> -Categoria: consta de coches de segunda manos, km0 y nuevo<br/>
+> -Usuario: nombre, direccción, email, teléfono<br/>
+> -Compra: coche, usuario, pagar, contacto<br/>
+> -Venta: coche, usuario, contacto<br/>
 > 
 > ## Integrantes del equipo de desarrollo:
 > 1. Pavel Egido del Arco; 	p.egido@alumnos.urjc.es; Cuenta GitHub: o0Pavelo0 
