@@ -1,14 +1,14 @@
 > # BuyCars
 >
 > ## Descripción de la temática
-> se trata de una Web de compra venta de coches, donde la parte publica consta de un buscador, filtrar un vehiculo 
-> en función de su categoria, acceder a la descripcion de cada vehiculo y registrarse para realizar la compra.
+> Se trata de una Web de compra - venta de coches, donde la parte pública consta de un buscador, filtrar un vehículo 
+> en función de su categoría, acceder a la descripción de cada automóvil y registrarse para realizar la adquisición del coche.
 >
-> la parte privada aparte de las categorias publicas el usario podra, subir un producto, realizar una compra o contactar con el vendedor.
+> La parte privada aparte de las categorías públicas el usuario podrá, subir un producto, realizar una compra o contactar con el vendedor.
 >
 > ## Nombre y descripcion de cada entidad
 > -Coche: cada entidad coche se identifica con marca, modelo, año matriculación, Km y precio.<br/>
-> -Categoria: consta de coches de segunda manos, km0 y nuevo.<br/>
+> -Categoría: consta de coches de segunda mano, km0 y nuevo.<br/>
 > -Usuario: nombre, direccción, email, teléfono.<br/>
 > -Compra: coche, usuario, pagar, contacto.<br/>
 > -Venta: coche, usuario, contacto.<br/>
