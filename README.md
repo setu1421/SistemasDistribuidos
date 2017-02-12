@@ -7,7 +7,7 @@
 > la parte privada aparte de las categorias publicas el usario podra, subir un producto, realizar una compra o contactar con el vendedor
 >
 > ## Nombre y descripcion de cada entidad
-> -Coche: cada identidad coche se identifica con una matricula, marca, modelo
+> -Coche: cada entidad coche se identifica con marca, modelo, año matriculación, Km y precio<br/>
 > -Categoria: consta de coches de segunda manos, km0 y nuevo
 > -Usuario: nombre, direccción, email, telefono
 > -Compra: coche, usuario, pagar, contacto
