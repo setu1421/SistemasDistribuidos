@@ -1,4 +1,4 @@
-> # BuyCars.
+> # BuyCars
 >
 > ## Descripción de la temática
 > Se trata de una Web de compra - venta de coches, donde la parte pública consta de un buscador, filtrar un vehículo 
