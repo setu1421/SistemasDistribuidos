@@ -16,10 +16,10 @@
 > **Pavel Egido del Arco**<br/>
    * Email: p.egido@alumnos.urjc.es<br/>
    * Cuenta GitHub: o0Pavelo0 <br/>
-> **Alvaro Rollin Guerro**<br/>
+>**Alvaro Rollin Guerro**<br/>
    * Email:	a.rollin@alumnos.urjc.es<br/>
    * Cuenta GitHub: ROLLIN89 <br/>
-> **Osvaldo Renato	Luzuriaga Luzuriaga**
+>**Osvaldo Renato	Luzuriaga Luzuriaga**
    * Email: or.luzuriaga@alumnos.urjc.es <br/>
    * Cuenta GitHub: orluzuriaga <br/>
 >
