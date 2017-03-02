@@ -1,4 +1,4 @@
-> # BuyCars
+> # **BuyCars**
 >
 > ## Descripción de la temática
 > Se trata de una Web de compra/venta de coches en la que un usuario podrá ver una gran variedad de coches para comprar. En la parte pública de la web, el usuario podrá hacer una búsqueda filtrada para encontrar el vehículo que desee, ver su descripción, características, precio, etc. También tendrá la opción de loguearse o registrarse para acceder a la parte privada de la aplicación.
@@ -13,9 +13,9 @@
 > -Venta: en esta entidad guardaremos los datos relacionados a los usuarios y los coches que venden además del precio de venta y más datos.<br/>
 > 
 > ## Integrantes del equipo de desarrollo:
-> 1. Pavel Egido del Arco; 	p.egido@alumnos.urjc.es; Cuenta GitHub: o0Pavelo0 
-> 2. Alvaro Rollin Guerro; Correo:	a.rollin@alumnos.urjc.es; Cuenta GitHub: ROLLIN89
-> 3. Osvaldo Renato	Luzuriaga Luzuriaga; Correo: or.luzuriaga@alumnos.urjc.es; Cuenta GitHub: orluzuriaga
+> * Pavel Egido del Arco; 	p.egido@alumnos.urjc.es; Cuenta GitHub: o0Pavelo0 
+> * Alvaro Rollin Guerro; Correo:	a.rollin@alumnos.urjc.es; Cuenta GitHub: ROLLIN89
+> * Osvaldo Renato	Luzuriaga Luzuriaga; Correo: or.luzuriaga@alumnos.urjc.es; Cuenta GitHub: orluzuriaga
 >
 > ## Tablero Trello
 >  Enlace al [Tablero BuyCars] (https://trello.com/invite/b/89zXO16r/06b870b346ef37954a5d89b8330a5326/sistemas-distribuidos)
