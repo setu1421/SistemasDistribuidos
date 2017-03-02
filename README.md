@@ -15,13 +15,13 @@
 > ## Integrantes del equipo de desarrollo:
 > **Pavel Egido del Arco**<br/>
    * Email: p.egido@alumnos.urjc.es<br/>
-   * Cuenta GitHub: o0Pavelo0 
+   * Cuenta GitHub: o0Pavelo0 <br/>
 > **Alvaro Rollin Guerro**<br/>
    * Email:	a.rollin@alumnos.urjc.es<br/>
-   * Cuenta GitHub: ROLLIN89
+   * Cuenta GitHub: ROLLIN89 <br/>
 > **Osvaldo Renato	Luzuriaga Luzuriaga**
    * Email: or.luzuriaga@alumnos.urjc.es <br/>
-   * Cuenta GitHub: orluzuriaga
+   * Cuenta GitHub: orluzuriaga <br/>
 >
 > ## Tablero Trello
 >  Enlace al [Tablero BuyCars] (https://trello.com/invite/b/89zXO16r/06b870b346ef37954a5d89b8330a5326/sistemas-distribuidos)
