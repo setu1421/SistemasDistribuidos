@@ -13,8 +13,8 @@
 > **Venta:** en esta entidad guardaremos los datos relacionados a los usuarios y los coches que venden además del precio de venta y más datos.<br/>
 > 
 > ## Integrantes del equipo de desarrollo:
-> **Pavel Egido del Arco**
-     + **Email:** p.egido@alumnos.urjc.es
+> **Pavel Egido del Arco**<br/>
+     + **Email:** p.egido@alumnos.urjc.es<br/>
      + **Cuenta GitHub:**  o0Pavelo0 
 > * Alvaro Rollin Guerro; Correo:	a.rollin@alumnos.urjc.es; Cuenta GitHub: ROLLIN89
 > * Osvaldo Renato	Luzuriaga Luzuriaga; Correo: or.luzuriaga@alumnos.urjc.es; Cuenta GitHub: orluzuriaga
