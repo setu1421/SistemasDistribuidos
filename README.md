@@ -6,7 +6,7 @@
 > En la parte privada el usuario podrá subir su vehículo para venderlo, negociar con otro usuario o concretar una compra de un vehículo, además de todas las funcionalidad de la parte pública de la web.
 >
 > ## Nombre y descripcion de cada entidad
-> **+Coche:** esta entidad nos mostrará todos los datos relacionados con el vehículo, así como: Marca, Modelo, Matricula, Precio, etc.<br/>
+> ** *Coche:** esta entidad nos mostrará todos los datos relacionados con el vehículo, así como: Marca, Modelo, Matricula, Precio, etc.<br/>
 > **-Categoría:** en esta entidad aparecerán las distintas categorías o familias de cada vehículo como por ejemplo: coches familiares, 4x4, americanos, japoneses, etc.<br/>
 >**-Usuario:** en esta entidad aparecerán los datos relativos a los usuarios registrados en la aplicación como el nombre, direccción, email, teléfono, etc.<br/>
 > **-Compra:** en esta entidad guardaremos todas las compras o transacciones realizadas entre usuarios, en la que aparecerán entre otros coche, comprador, vendedor, cantidad, etc.<br/>
