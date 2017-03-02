@@ -14,7 +14,7 @@
 > 
 > ## Integrantes del equipo de desarrollo:
 > **Pavel Egido del Arco**<br/>
-    * <br>  **Email:** p.egido@alumnos.urjc.es<br/>
+    ** *Email:** p.egido@alumnos.urjc.es<br/>
      * **Cuenta GitHub:**  o0Pavelo0 
 > * Alvaro Rollin Guerro; Correo:	a.rollin@alumnos.urjc.es; Cuenta GitHub: ROLLIN89
 > * Osvaldo Renato	Luzuriaga Luzuriaga; Correo: or.luzuriaga@alumnos.urjc.es; Cuenta GitHub: orluzuriaga
