@@ -1,4 +1,4 @@
-> **BuyCars**
+> # ***BuyCars***
 >
 > ## Descripción de la temática
 > Se trata de una Web de compra/venta de coches en la que un usuario podrá ver una gran variedad de coches para comprar. En la parte pública de la web, el usuario podrá hacer una búsqueda filtrada para encontrar el vehículo que desee, ver su descripción, características, precio, etc. También tendrá la opción de loguearse o registrarse para acceder a la parte privada de la aplicación.
