@@ -12,7 +12,7 @@ public class Categoria {
 
     private String tipoCategoria;
     private Coche coche;
-	 
+	private Coche hola; 
     
 	  //Constructor necesario para la carga de la BBDD
 	    protected Categoria(){}
