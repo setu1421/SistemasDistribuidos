@@ -4,8 +4,9 @@ public class Anuncio {
 
 	private String nombre;
 	private String asunto;
-	private String comentario;
-    private String hola;
+	private String comen;
+    
+    
 	public Anuncio() {
 
 	}
