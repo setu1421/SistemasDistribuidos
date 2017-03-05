@@ -1,65 +1,58 @@
 package o0pavel0o.buycars;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.servlet.http.HttpSession;
+import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class TablonController {
 
 	@Autowired
-	private Usuario usuario;
+	private AnunciosRepository repository;
 
-	private List<Anuncio> anuncios = new ArrayList<>();
-
-	public TablonController() {
-		anuncios.add(new Anuncio("Maria", "Quiero vender mi coche BMW 320D", "20000€"));
-		anuncios.add(new Anuncio("Carlos", "Compro BMW", "10000€"));
-		anuncios.add(new Anuncio("Roberto", "Vendo Mercedes", "15000€"));
+	@PostConstruct
+	public void init() {
+		repository.save(new Anuncio("Maria", "Quiero vender mi coche BMW 320D", "20000€"));
+		repository.save(new Anuncio("Carlos", "Compro BMW", "10000€"));
+		repository.save(new Anuncio("Roberto", "Vendo Mercedes", "15000€"));
 	}
 
-	@GetMapping("/")
-	public String tablon(Model model, HttpSession session) {
+	@RequestMapping("/")
+	public String tablon(Model model, Pageable page) {
 
-		model.addAttribute("anuncios", anuncios);
-		model.addAttribute("BuyCars", session.isNew());
+		model.addAttribute("anuncios", repository.findAll(page));
 
 		return "tablon";
 	}
 
-	@PostMapping("/anuncio/nuevo")
+	@RequestMapping("/anuncio/nuevo")
 	public String nuevoAnuncio(Model model, Anuncio anuncio) {
 
-		anuncios.add(anuncio);
-
-		usuario.setNombre(anuncio.getNombre());
-		usuario.incAnuncios();
+		repository.save(anuncio);
 
 		return "anuncio_guardado";
 
 	}
+	
+	
+	
+	
+	
+	/*@RequestMapping(value = "/anuncios", method = RequestMethod.POST)
+	public ResponseEntity<Boolean> addAnuncio(@RequestBody Anuncio anuncio) {
+		repository.save(anuncio);
+		return new ResponseEntity<Boolean>(HttpStatus.CREATED);
+	}*/
 
-	@GetMapping("/anuncio/nuevo_form")
-	public String nuevoAnuncioForm(Model model) {
-
-		model.addAttribute("nombre", usuario.getNombre());
-		model.addAttribute("num_anuncios", usuario.getNumAnuncios());
-
-		return "nuevo_anuncio";
-	}
-
-	@GetMapping("/anuncio/{num}")
-	public String nuevoAnuncio(Model model, @PathVariable int num) {
-
-		Anuncio anuncio = anuncios.get(num - 1);
+	@RequestMapping("/anuncio/{id}")
+	public String verAnuncio(Model model, @PathVariable long id) {
+		
+		Anuncio anuncio = repository.findOne(id);
 
 		model.addAttribute("anuncio", anuncio);
 

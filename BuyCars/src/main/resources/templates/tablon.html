@@ -1,10 +1,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
+
 
 <title>BuyCars</title>
 
@@ -16,6 +16,7 @@
 <!-- Custom styles for this template -->
 <link href="https://v4-alpha.getbootstrap.com/examples/album/album.css"
 	rel="stylesheet">
+	
 </head>
 
 <body>
@@ -76,10 +77,18 @@
 					</p>
 				</div>
 				{{/anuncios}}
-
+				
+				
 				<div class="container">
+					<ul class="pagination pagination-lg">
+					  <li><a href="/?page=1&size=3">1</a></li>
+					  <li><a href="/?page=2&size=3">2</a></li>
+					  <li><a href="/?page=3&size=3">3</a></li>
+					  <li><a href="/?page=4&size=3">4</a></li>
+					  <li><a href="/?page=5&size=3">5</a></li>
+					</ul>
 					<p>
-						<a href="/anuncio/nuevo_form" class="btn btn-primary">Nuevo	anuncio</a> 
+						<a href="nuevoAnuncio.html" class="btn btn-primary">Nuevo	anuncio</a> 
 						<a href="#" class="btn btn-secondary">Mis favoritos</a>
 					</p>
 				</div>
@@ -87,9 +96,6 @@
 
 		</div>
 	</div>
-	
-	
-
 
 	<footer class="text-muted">
 		<div class="container">

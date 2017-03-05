@@ -1,18 +1,22 @@
 package o0pavel0o.buycars;
 
-public class Anuncio {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
+public class Anuncio {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
+
 	private String nombre;
 	private String asunto;
 	private String comentario;
-    
 
-	
-	//Constructor  
-	public Anuncio() {
-
-	}
+	public Anuncio() {}
 
 	public Anuncio(String nombre, String asunto, String comentario) {
 		super();
