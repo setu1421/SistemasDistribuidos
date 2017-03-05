@@ -2,8 +2,6 @@ package o0pavel0o.buycars;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import o0pavel0o.buycars.Anuncio;
-
 public interface AnunciosRepository extends JpaRepository<Anuncio, Long> {
 
 	
