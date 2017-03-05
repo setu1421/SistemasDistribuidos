@@ -14,14 +14,27 @@ public class TablonController {
 
 	@Autowired
 	private AnunciosRepository repository;
+    
 
+	@Autowired
+	private CategoriaRepository categoriaRepository;
+	
 	@PostConstruct
 	public void init() {
 		repository.save(new Anuncio("Maria", "Quiero vender mi coche BMW 320D", "20000€"));
 		repository.save(new Anuncio("Carlos", "Compro BMW", "10000€"));
 		repository.save(new Anuncio("Roberto", "Vendo Mercedes", "15000€"));
+		
+		
+		categoriaRepository.save(new Categoria("familair"));
 	}
 
+	
+	
+	
+	
+	
+	
 	@RequestMapping("/")
 	public String tablon(Model model, Pageable page) {
 

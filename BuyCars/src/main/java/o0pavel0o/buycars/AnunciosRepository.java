@@ -1,4 +1,4 @@
-package repositorios;
+package o0pavel0o.buycars;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
