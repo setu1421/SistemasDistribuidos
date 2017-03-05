@@ -9,6 +9,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import repositorios.AnunciosRepository;
+
 @Controller
 public class TablonController {
 
@@ -41,14 +43,6 @@ public class TablonController {
 	
 	
 	
-	
-	
-	/*@RequestMapping(value = "/anuncios", method = RequestMethod.POST)
-	public ResponseEntity<Boolean> addAnuncio(@RequestBody Anuncio anuncio) {
-		repository.save(anuncio);
-		return new ResponseEntity<Boolean>(HttpStatus.CREATED);
-	}*/
-
 	@RequestMapping("/anuncio/{id}")
 	public String verAnuncio(Model model, @PathVariable long id) {
 		
