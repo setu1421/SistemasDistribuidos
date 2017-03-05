@@ -1,11 +1,13 @@
 <html>
 <head>
 	<meta charset="UTF-8"/>
+	
 </head>
 <body>
 
+	<div class="container">
 	<h2>Nuevo anuncio ({{num_anuncios}})</h2>
-
+	
 	<form action="/anuncio/nuevo" method="post">
 		<p>Nombre: </p>
 		<input type='text' name='nombre' value='{{nombre}}' >
@@ -16,5 +18,7 @@
 
 		<input type='submit' value='Enviar'>
 	</form>
+	
+	</div>
 </body>
 </html>
