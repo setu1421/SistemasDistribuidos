@@ -23,6 +23,7 @@ public class TablonController {
 	public TablonController() {
 		anuncios.add(new Anuncio("Maria", "Quiero vender mi coche BMW 320D", "20000€"));
 		anuncios.add(new Anuncio("Carlos", "Compro BMW", "10000€"));
+		anuncios.add(new Anuncio("Roberto", "Vendo Mercedes", "15000€"));
 	}
 
 	@GetMapping("/")
