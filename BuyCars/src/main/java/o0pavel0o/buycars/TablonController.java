@@ -1,5 +1,7 @@
 package o0pavel0o.buycars;
 
+import java.util.List;
+
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,14 +21,19 @@ public class TablonController {
 	@Autowired
 	private CategoriaRepository categoriaRepository;
 	
+
+	@Autowired
+	private CocheRepository cocheRepository;
+	
 	@PostConstruct
 	public void init() {
 		repository.save(new Anuncio("Maria", "Quiero vender mi coche BMW 320D", "20000€"));
 		repository.save(new Anuncio("Carlos", "Compro BMW", "10000€"));
 		repository.save(new Anuncio("Roberto", "Vendo Mercedes", "15000€"));
 		
-		
-		categoriaRepository.save(new Categoria("familair"));
+	
+		categoriaRepository.save(new Categoria("Fragoneta"));
+		cocheRepository.save(new Coche("4422FGU", "Seat","leon","diesel","azul","250cv",100.000,5,25000.00));
 	}
 
 	
