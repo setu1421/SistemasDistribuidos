@@ -30,7 +30,7 @@
 >  [Tablero BuyCars] (https://trello.com/invite/b/89zXO16r/06b870b346ef37954a5d89b8330a5326/sistemas-distribuidos)
 
 > ## Diagrama de navegacion
->  [Diagrama de navegación] (https://prezi.com/rsrcysge-ecj/present/?auth_key=7ev3olp&follow=zqm0mkczxmr-)
+>  [Diagrama de navegación] (https://prezi.com/rsrcysge-ecj/present/?auth_key=7ev3olp&follow=zqm0mkczxmr)
 
 
 > ## Diagrama UML
