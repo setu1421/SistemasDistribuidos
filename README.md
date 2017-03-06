@@ -30,4 +30,4 @@
 >  Enlace al [Tablero BuyCars] (https://trello.com/invite/b/89zXO16r/06b870b346ef37954a5d89b8330a5326/sistemas-distribuidos)
 
 > ## Diagrama de navegacion
-> Enlace al [Diagram de presentacion](https://prezi.com/rsrcysge-ecj/present/?auth_key=7ev3olp&follow=zqm0mkczxmr-)
+> Enlace al [Diagrama de presentación] (https://prezi.com/rsrcysge-ecj/present/?auth_key=7ev3olp&follow=zqm0mkczxmr-)
