@@ -25,6 +25,16 @@ public class TablonController {
 	@Autowired
 	private CocheRepository cocheRepository;
 	
+	@Autowired
+	private UsuarioRepository usuarioRepository;
+	
+	@Autowired
+	private CompraRepository compraRepository;
+	
+	
+	@Autowired
+	private VentaRepository ventaRepository;
+	
 	@PostConstruct
 	public void init() {
 		repository.save(new Anuncio("Maria", "Quiero vender mi coche BMW 320D", "20000€"));
@@ -34,6 +44,20 @@ public class TablonController {
 	
 		categoriaRepository.save(new Categoria("Fragoneta"));
 		cocheRepository.save(new Coche("4422FGU", "Seat","leon","diesel","azul","250cv",100.000,5,25000.00));
+		
+		
+   
+	//Creo usuario
+	Usuario u1 = new Usuario("Pedro",0,"cerca de casa","notengo@gmail.com","677455558");
+	usuarioRepository.save(u1);
+	
+    //Creo compra
+	Compra c1 = new Compra("6/03/2017","02:45",2);
+	compraRepository.save(c1);
+	
+	//Creo venta
+	Venta v1 = new Venta("07/03/2017","02:55",1);
+	ventaRepository.save(v1);
 	}
 
 	
