@@ -15,6 +15,7 @@ public class Anuncio {
 	private String nombre;
 	private String asunto;
 	private String comentario;
+	
 
 	public Anuncio() {}
 

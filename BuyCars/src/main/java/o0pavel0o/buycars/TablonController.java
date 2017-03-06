@@ -70,9 +70,10 @@ public class TablonController {
 	}
 
 	@RequestMapping("/anuncio/nuevo")
-	public String nuevoAnuncio(Model model, Anuncio anuncio) {
+	public String nuevoAnuncio(Model model, Anuncio anuncio, Coche coche) {
 
 		repository.save(anuncio);
+		cocheRepository.save(coche);
 
 		return "anuncio_guardado";
 
@@ -91,6 +92,14 @@ public class TablonController {
 	}
 	
 	
+	@RequestMapping("/categoria/nueva")
+	public String nuevaCategoria(Model model, Categoria categoria) {
+
+		categoriaRepository.save(categoria);
+
+		return "categoria_guardada";
+
+	}
 	
 	
 	
