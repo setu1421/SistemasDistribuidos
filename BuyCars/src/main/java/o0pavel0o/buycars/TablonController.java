@@ -25,10 +25,6 @@ public class TablonController {
 	@Autowired
 	private CocheRepository cocheRepository;
 	
-	@Autowired
-	private UsuarioRepository usuarioRepository;
-	
-	
 	@PostConstruct
 	public void init() {
 		repository.save(new Anuncio("Maria", "Quiero vender mi coche BMW 320D", "20000€"));
@@ -38,20 +34,8 @@ public class TablonController {
 	
 		categoriaRepository.save(new Categoria("Fragoneta"));
 		cocheRepository.save(new Coche("4422FGU", "Seat","leon","diesel","azul","250cv",100.000,5,25000.00));
-	
-		Usuario u1 = new Usuario("Pedro",0,"no me olvide","notengo@gmail.com","677455558");
-		
-		
-		usuarioRepository.save(u1);
-		
-		
 	}
 
-	
-	
-	
-	
-	
 	
 	@RequestMapping("/")
 	public String tablon(Model model, Pageable page) {
@@ -81,4 +65,7 @@ public class TablonController {
 
 		return "ver_anuncio";
 	}
+	
+	
+	
 }

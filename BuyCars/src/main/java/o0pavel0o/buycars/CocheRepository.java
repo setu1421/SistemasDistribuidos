@@ -9,6 +9,5 @@ public interface CocheRepository extends JpaRepository<Coche, Long>  {
 
 	Anuncio findByMatricula(String matricula);
 
-	;
 	
 }
