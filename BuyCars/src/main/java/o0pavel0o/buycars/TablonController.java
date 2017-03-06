@@ -102,5 +102,15 @@ public class TablonController {
 	}
 	
 	
+	@RequestMapping("/usuario/nuevo")
+	public String nuevoUsuario(Model model, Usuario usuario) {
+
+		usuarioRepository.save(usuario);
+
+		return "usuario_guardado";
+
+	}
+	
+	
 	
 }
