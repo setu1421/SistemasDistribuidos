@@ -42,7 +42,7 @@ public class TablonController {
 		repository.save(new Anuncio("Roberto", "Vendo Mercedes", "15000€"));
 		
 	
-		categoriaRepository.save(new Categoria("Fragoneta"));
+		categoriaRepository.save(new Categoria("Furgoneta"));
 		cocheRepository.save(new Coche("4422FGU", "Seat","leon","diesel","azul","250cv",100.000,5,25000.00));
 		
 		
@@ -65,6 +65,10 @@ public class TablonController {
 	public String tablon(Model model, Pageable page) {
 
 		model.addAttribute("anuncios", repository.findAll(page));
+		model.addAttribute("anunciosCount", repository.count());
+		model.addAttribute("usuarios", usuarioRepository.count());
+		model.addAttribute("categorias", categoriaRepository.count());
+		model.addAttribute("coches", cocheRepository.count());
 
 		return "tablon";
 	}
