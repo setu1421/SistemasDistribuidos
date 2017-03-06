@@ -6,11 +6,12 @@
 > En la parte privada el usuario podrá subir su vehículo para venderlo, negociar con otro usuario o concretar una compra de un vehículo, además de todas las funcionalidad de la parte pública de la web.
 >
 > ## Nombre y descripcion de cada entidad
-> **Coche:** esta entidad nos mostrará todos los datos relacionados con el vehículo, así como: Marca, Modelo, Matricula, Precio, etc.<br/>
+> **Coche:** esta entidad nos mostrará todos los datos relacionados con el vehículo, así como: Marca, Modelo, Matricula, Color, etc.<br/>
 > **Categoría:** en esta entidad aparecerán las distintas categorías o familias de cada vehículo como por ejemplo: coches familiares, 4x4, americanos, japoneses, etc.<br/>
->**Usuario:** en esta entidad aparecerán los datos relativos a los usuarios registrados en la aplicación como el nombre, direccción, email, teléfono, etc.<br/>
-> **Compra:** en esta entidad guardaremos todas las compras o transacciones realizadas entre usuarios, en la que aparecerán entre otros coche, comprador, vendedor, cantidad, etc.<br/>
+>**Usuario:** en esta entidad aparecerán los datos relativos a los usuarios registrados en la aplicación como el nombre, apellidos, email, teléfono, etc.<br/>
+> **Compra:** en esta entidad guardaremos todas las compras o transacciones realizadas entre usuarios, en la que aparecerán entre otros coche, comprador, vendedor, precio de la compra, etc.<br/>
 > **Venta:** en esta entidad guardaremos los datos relacionados a los usuarios y los coches que venden además del precio de venta y más datos.<br/>
+> **CocheCategoria:** en esta tabla, creada a consecuencia de una relación N:M entre la tabla Coche y la tabla Categoria, guardaremos los datos de cada coche y su categoría correspondiente. Como un coche puede tener más de una categoría necesitamos guardar estos datos en esta tabla auxiliar, ya que no podríamos meter estos datos en la tabla Coche.<br/>
 > 
 > ## Integrantes del equipo de desarrollo:
 > **Pavel Egido del Arco**<br/>
