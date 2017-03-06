@@ -38,14 +38,14 @@ public class TablonController {
 	@PostConstruct
 	public void init() {
 		repository.save(new Anuncio("Maria", "Quiero vender mi coche BMW 320D", "20000€"));
-		repository.save(new Anuncio("Carlos", "Compro BMW", "10000€"));
+		repository.save(new Anuncio("Carlos", "Vendo Audi", "10000€"));
 		repository.save(new Anuncio("Roberto", "Vendo Mercedes", "15000€"));
 		
 	
 		categoriaRepository.save(new Categoria("Furgoneta"));
-		cocheRepository.save(new Coche("4422FGU", "Seat","leon","diesel","azul","250cv",100.000,5,25000.00));
-		
-		
+		cocheRepository.save(new Coche("4422FGU", "BMW","320","diesel","rojo","250cv",100.000,5,25000.00));
+		cocheRepository.save(new Coche("5555FGU", "Audi","A5","diesel","azul","350cv",100.000,5,25000.00));
+		cocheRepository.save(new Coche("4422FFF", "Mercedes","A180","gasolina","negro","150cv",100.000,5,25000.00));
    
 	//Creo usuario
 	Usuario u1 = new Usuario("Pedro",0,"cerca de casa","notengo@gmail.com","677455558");
