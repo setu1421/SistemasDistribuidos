@@ -4,10 +4,13 @@ package o0pavel0o.buycars;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 
 
@@ -34,7 +37,7 @@ public class Coche {
   //Constructor necesario para la carga de la BBDD
     protected Coche(){}
 
-    
+
 
 
 	public Coche(String matricula, String marca, String modelo, String combustible, String color, String potencia,
