@@ -23,18 +23,18 @@
    * Cuenta GitHub: ROLLIN89 <br/>
    
 >**Osvaldo Renato	Luzuriaga Luzuriaga**<br/>
-   * Email: or.luzuriaga@alumnos.urjc.es <br/>
-   * Cuenta GitHub: orluzuriaga <br/>
+>   * Email: or.luzuriaga@alumnos.urjc.es <br/>
+>   * Cuenta GitHub: orluzuriaga <br/>
 >
 > ## Tablero Trello
 >  [Tablero BuyCars] (https://trello.com/invite/b/89zXO16r/06b870b346ef37954a5d89b8330a5326/sistemas-distribuidos)
-
+>
 > ## Diagrama de navegacion
 >  [Diagrama de navegación] (http://prezi.com/q3d9w2dci5w4/?utm_campaign=share&utm_medium=copy&rc=ex0share )
-
-
+>
+>
 > ## Diagrama UML
 > [Diagrama UML] (https://github.com/o0Pavel0o/SistemasDistribuidos/blob/master/UMLBuyCars.png)
-
+>
 >## Diagrama Entidad-Relacion
 > [Diagrama Entidad-Relación] (https://github.com/o0Pavel0o/SistemasDistribuidos/blob/master/Entidad_relacion.png)
