@@ -75,9 +75,9 @@ public class TablonController {
 		
 		
 		//Se crean los anuncios: Maria crea 2 anuncios y Roberto 1
-		Anuncio p1 = new Anuncio("Maria", "Quiero vender mi coche BMW 320D", "20000€");
-		Anuncio p2 = new Anuncio("Maria", "Vendo Audi", "10000€");
-		Anuncio p3 = new Anuncio("Roberto", "Vendo Mercedes", "15000€");
+		Anuncio p1 = new Anuncio("Maria", "Quiero vender mi coche BMW 320D", 20000.00);
+		Anuncio p2 = new Anuncio("Maria", "Vendo Audi", 10000.00);
+		Anuncio p3 = new Anuncio("Roberto", "Vendo Mercedes", 15000.00);
 		p1.setUsuario(u1);
 		p2.setUsuario(u1);
 		p3.setUsuario(u2);
@@ -116,14 +116,10 @@ public class TablonController {
 		
 		
 		// Creo las compras
-		
 		Compra compra1 = new Compra("11/03/2017", 10.000);
 		compra1.setCoche(c2);
 		compra1.setVendedor(u1);
 		compra1.setComprador(u2);
-   
-		
-		
 		compraRepository.save(compra1);
 		
 		
@@ -182,6 +178,45 @@ public class TablonController {
 		usuarioRepository.save(usuario);
 
 		return "usuario_guardado";
+
+	}
+	
+	
+	@RequestMapping("/comprar/{id}")
+	public String comprar(Model model, Compra compra, @PathVariable long id) {
+		
+		Coche coche = cocheRepository.findOne(id);
+		Anuncio anuncio = repository.findOne(id);
+		
+		String fechaCompra = "11/03/2017";
+		compra.setCoche(coche);
+		compra.setComprador(anuncio.getUsuario());
+		compra.setFechaCompra(fechaCompra);
+		compra.setPrecio_compra(anuncio.getPrecio());
+		compra.setVendedor(anuncio.getUsuario());
+		
+		compraRepository.save(compra);
+
+		return "compra_guardada";
+
+	}
+	
+	
+	@RequestMapping("/vender/{id}")
+	public String vender(Model model, Venta venta, @PathVariable long id) {
+		
+		Coche coche = cocheRepository.findOne(id);
+		Anuncio anuncio = repository.findOne(id);
+		
+		String fechaVenta = "11/03/2017";
+		venta.setCoche(coche);
+		venta.setUsuario(anuncio.getUsuario());
+		venta.setFechaVenta(fechaVenta);
+		venta.setPrecio(anuncio.getPrecio());
+
+		ventaRepository.save(venta);
+
+		return "venta_guardada";
 
 	}
 	

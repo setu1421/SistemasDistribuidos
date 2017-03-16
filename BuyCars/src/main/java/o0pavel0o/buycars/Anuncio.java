@@ -15,7 +15,7 @@ public class Anuncio {
 
 	private String nombre;
 	private String asunto;
-	private String comentario;
+	private Double precio;
 	
 	@OneToOne
 	private Usuario usuario;
@@ -27,11 +27,11 @@ public class Anuncio {
 	
 	public Anuncio() {}
 
-	public Anuncio(String nombre, String asunto, String comentario) {
+	public Anuncio(String nombre, String asunto, Double precio) {
 		super();
 		this.nombre = nombre;
 		this.asunto = asunto;
-		this.comentario = comentario;
+		this.precio = precio;
 		
 		this.usuario = new Usuario();
 		this.coche = new Coche();
@@ -53,12 +53,12 @@ public class Anuncio {
 		this.asunto = asunto;
 	}
 
-	public String getComentario() {
-		return comentario;
+	public Double getPrecio() {
+		return precio;
 	}
 
-	public void setComentario(String comentario) {
-		this.comentario = comentario;
+	public void setPrecio(Double precio) {
+		this.precio = precio;
 	}
 
 	
@@ -84,7 +84,7 @@ public class Anuncio {
 
 	@Override
 	public String toString() {
-		return "Anuncio [nombre=" + nombre + ", asunto=" + asunto + ", comentario=" + comentario + "]";
+		return "Anuncio [nombre=" + nombre + ", asunto=" + asunto + ", precio=" + precio + "]";
 	}
 
 }
