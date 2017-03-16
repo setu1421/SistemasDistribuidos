@@ -221,7 +221,7 @@ public class TablonController {
 	}
 	
 	
-	/*@RequestMapping("/login")
+	/*@RequestMapping("/login{id}")
 	public String login(Model model,  @PathVariable long id) {
 		id = 2;
 		Usuario usuario = usuarioRepository.findOne(id);
