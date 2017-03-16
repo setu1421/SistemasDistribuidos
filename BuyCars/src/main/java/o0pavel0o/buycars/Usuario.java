@@ -1,7 +1,9 @@
 package o0pavel0o.buycars;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -28,8 +30,16 @@ public class Usuario {
     private String telefono;
 	
     
-    
 	
+    
+    
+    
+    
+
+
+
+
+
 	/**
 	 * Constructores
 	 */
@@ -46,11 +56,16 @@ public class Usuario {
 		this.direccion = direccion;
 		this.email = email;
 		this.telefono = telefono;
+		
+	
 	}
 
 
 
-
+    /**
+     * Getters and Setters
+     * @return
+     */
 
 	public String getDireccion() {
 		return direccion;
@@ -100,10 +115,13 @@ public class Usuario {
 
 
 
-	/**
-	 * 
-	 * @Getters and setters
-	 */
+
+
+
+
+
+
+
 	public String getNombre() {
 		return nombre;
 	}

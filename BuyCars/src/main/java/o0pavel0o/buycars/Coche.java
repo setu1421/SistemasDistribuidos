@@ -31,6 +31,8 @@ public class Coche {
     private int plazas;
     private double precio;
     
+    @OneToOne
+    private Categoria categoria;
    // private List<String> equipamientoExtra;
     
     
@@ -52,6 +54,7 @@ public class Coche {
 		this.kilometros = kilometros;
 		this.plazas = plazas;
 		this.precio = precio;
+		this.categoria = new Categoria();
 		
 	}
 
@@ -197,6 +200,28 @@ public class Coche {
 
 
 
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+
+
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
+
+
+
+
+	public void setKilometros(double kilometros) {
+		this.kilometros = kilometros;
+	}
+
+
+    
+	
 
 	/*public List<String> getEquipamientoExtra() {
 		return equipamientoExtra;

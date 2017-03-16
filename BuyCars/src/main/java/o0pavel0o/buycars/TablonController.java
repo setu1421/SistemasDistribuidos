@@ -35,29 +35,99 @@ public class TablonController {
 	@Autowired
 	private VentaRepository ventaRepository;
 	
+	
+	
 	@PostConstruct
 	public void init() {
-		repository.save(new Anuncio("Maria", "Quiero vender mi coche BMW 320D", "20000€"));
-		repository.save(new Anuncio("Carlos", "Vendo Audi", "10000€"));
-		repository.save(new Anuncio("Roberto", "Vendo Mercedes", "15000€"));
+		//Creo los usuarios Maria y Roberto
+		Usuario u1 = new Usuario("Maria",0,"cerca de casa","maria@gmail.com","678555999");
+		Usuario u2 = new Usuario("Roberto",0,"plaza abrantes","roberto@gmail.com","677455558");
+		//Creo 3 coches c1 y c2 pertenecen a Maria, c3 a Roberto
+		Coche c1 = new Coche("4422FGU", "BMW","320","diesel","rojo","250cv",100.000,5,25000.00);
+		Coche c2 = new Coche("5555FGU", "Audi","A5","diesel","azul","350cv",100.000,5,25000.00);
+		Coche c3 = new Coche("4422FFF", "Mercedes","A180","gasolina","negro","150cv",100.000,5,25000.00);
+		//Creo las categorias
+		Categoria ctg1 = new Categoria("4x4");
+		Categoria ctg2 = new Categoria("Deportivo");
+		Categoria ctg3 = new Categoria("Berlina");
+		
+		// Persisto las categorias
+		categoriaRepository.save(ctg1);
+		categoriaRepository.save(ctg2);
+		categoriaRepository.save(ctg3);
+		
+		//Actualizo las categoria a cada vehiculo creado
+		c1.setCategoria(ctg1);
+		c2.setCategoria(ctg2);
+		c3.setCategoria(ctg3);
+		
+		
+		
+		//Persisto los usuarios
+		usuarioRepository.save(u1);
+		usuarioRepository.save(u2);
+		
+		
+        //Persito los coches de cada usuario
+		cocheRepository.save(c1);
+		cocheRepository.save(c2);
+		cocheRepository.save(c3);
+		
+		
+		//Se crean los anuncios: Maria crea 2 anuncios y Roberto 1
+		Anuncio p1 = new Anuncio("Maria", "Quiero vender mi coche BMW 320D", "20000€");
+		Anuncio p2 = new Anuncio("Maria", "Vendo Audi", "10000€");
+		Anuncio p3 = new Anuncio("Roberto", "Vendo Mercedes", "15000€");
+		p1.setUsuario(u1);
+		p2.setUsuario(u1);
+		p3.setUsuario(u2);
+		
+		p1.setCoche(c1);
+		p2.setCoche(c2);
+		p3.setCoche(c3);
+		
+		
+		// Creo las ventas
+		
+		Venta venta1 = new Venta("6/03/2017", 10.000);
+		Venta venta2 = new Venta("8/03/2017", 40.000);
+		Venta venta3 = new Venta("10/03/2017", 100.000);
+		
+		venta1.setUsuario(u1);
+		venta2.setUsuario(u1);
+		venta3.setUsuario(u2);
+		
+		venta1.setCoche(c1);
+		venta2.setCoche(c2);
+		venta3.setCoche(c3);
+		
+		//Persisto los anuncios p1,p2,p3
+		repository.save(p1);
+		repository.save(p2);
+		repository.save(p3);
 		
 	
-		categoriaRepository.save(new Categoria("Furgoneta"));
-		cocheRepository.save(new Coche("4422FGU", "BMW","320","diesel","rojo","250cv",100.000,5,25000.00));
-		cocheRepository.save(new Coche("5555FGU", "Audi","A5","diesel","azul","350cv",100.000,5,25000.00));
-		cocheRepository.save(new Coche("4422FFF", "Mercedes","A180","gasolina","negro","150cv",100.000,5,25000.00));
+		//Persisto las ventas de los usuarios
+		
+		ventaRepository.save(venta1);
+		ventaRepository.save(venta2);
+		ventaRepository.save(venta3);
+		
+		
+		
+		// Creo las compras
+		
+		Compra compra1 = new Compra("11/03/2017", 10.000);
+		compra1.setCoche(c2);
+		compra1.setVendedor(u1);
+		compra1.setComprador(u2);
    
-	//Creo usuario
-	Usuario u1 = new Usuario("Pedro",0,"cerca de casa","notengo@gmail.com","677455558");
-	usuarioRepository.save(u1);
-	
-    //Creo compra
-	Compra c1 = new Compra("6/03/2017","02:45",2);
-	compraRepository.save(c1);
-	
-	//Creo venta
-	Venta v1 = new Venta("07/03/2017","02:55",1);
-	ventaRepository.save(v1);
+		
+		
+		compraRepository.save(compra1);
+		
+		
+			
 	}
 
 	

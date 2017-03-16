@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Anuncio {
@@ -16,7 +17,14 @@ public class Anuncio {
 	private String asunto;
 	private String comentario;
 	
+	@OneToOne
+	private Usuario usuario;
+	
+	@OneToOne
+	private Coche coche;
 
+	
+	
 	public Anuncio() {}
 
 	public Anuncio(String nombre, String asunto, String comentario) {
@@ -24,6 +32,9 @@ public class Anuncio {
 		this.nombre = nombre;
 		this.asunto = asunto;
 		this.comentario = comentario;
+		
+		this.usuario = new Usuario();
+		this.coche = new Coche();
 	}
 
 	public String getNombre() {
@@ -48,6 +59,27 @@ public class Anuncio {
 
 	public void setComentario(String comentario) {
 		this.comentario = comentario;
+	}
+
+	
+	
+	
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+
+	
+	
+	public Coche getCoche() {
+		return coche;
+	}
+
+	public void setCoche(Coche coche) {
+		this.coche = coche;
 	}
 
 	@Override

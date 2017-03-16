@@ -1,8 +1,10 @@
 package o0pavel0o.buycars;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 
 @Entity
@@ -15,9 +17,15 @@ public class Venta {
     
     
     private String fechaVenta;
-    private String hora;
-    private int numCoches;
+    private Double precio;
+    
 
+    @OneToOne
+    private Usuario usuario;
+    
+    
+    @OneToOne
+    private Coche coche;
     
     /**
      * Constructores
@@ -26,11 +34,24 @@ public class Venta {
 
 
 
-	public Venta(String fechaVenta, String hora, int numCoches) {
+	public Venta(String fechaVenta, Double precio) {
 		
 		this.fechaVenta = fechaVenta;
-		this.hora = hora;
-		this.numCoches = numCoches;
+		this.precio = precio;
+		this.usuario = new Usuario();
+		this.coche = new Coche();
+	}
+
+
+
+	public Coche getCoche() {
+		return coche;
+	}
+
+
+
+	public void setCoche(Coche coche) {
+		this.coche = coche;
 	}
 
 
@@ -47,29 +68,34 @@ public class Venta {
 
 
 
-	public String getHora() {
-		return hora;
+
+
+	public Double getPrecio() {
+		return precio;
 	}
 
 
 
-	public void setHora(String hora) {
-		this.hora = hora;
+	public void setPrecio(Double precio) {
+		this.precio = precio;
 	}
 
 
 
-	public int getNumCoches() {
-		return numCoches;
+	public Usuario getUsuario() {
+		return usuario;
 	}
 
 
 
-	public void setNumCoches(int numCoches) {
-		this.numCoches = numCoches;
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
-    
-    
+
+
+	
+	
+
     
     
 }

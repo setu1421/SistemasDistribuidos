@@ -19,12 +19,16 @@ public class Compra {
 	    
 	    
 	    private String fechaCompra;
-	    private String hora;
-	    private int numCoches;
+	    private Double precio_compra;
+	   
+	    @OneToOne
+	    private Usuario vendedor;
 	    
+	    @OneToOne
+	    private Usuario comprador;
 	    
-	 
-	    
+	    @OneToOne
+	    private Coche coche;
 	    
 	    
 	    /**
@@ -37,11 +41,13 @@ public class Compra {
 
 	    
 	    
-		public Compra(String fechaCompra, String hora, int numCoches) {
-			super();
+		public Compra(String fechaCompra, Double precio) {
+			
 			this.fechaCompra = fechaCompra;
-			this.hora = hora;
-			this.numCoches = numCoches;
+		    this.precio_compra = precio;
+		    this.vendedor= new Usuario();
+		    this.comprador = new Usuario();
+		    this.coche = new Coche();
 		}
 
 
@@ -63,27 +69,68 @@ public class Compra {
 
 
 
-		public String getHora() {
-			return hora;
+
+
+		public Double getPrecio_compra() {
+			return precio_compra;
 		}
 
 
 
-		public void setHora(String hora) {
-			this.hora = hora;
+
+
+		public void setPrecio_compra(Double precio_compra) {
+			this.precio_compra = precio_compra;
 		}
 
 
 
-		public int getNumCoches() {
-			return numCoches;
+
+
+		public Usuario getVendedor() {
+			return vendedor;
 		}
 
 
 
-		public void setNumCoches(int numCoches) {
-			this.numCoches = numCoches;
+
+
+		public void setVendedor(Usuario vendedor) {
+			this.vendedor = vendedor;
 		}
+
+
+
+
+
+		public Usuario getComprador() {
+			return comprador;
+		}
+
+
+
+
+
+		public void setComprador(Usuario comprador) {
+			this.comprador = comprador;
+		}
+
+
+
+
+
+		public Coche getCoche() {
+			return coche;
+		}
+
+
+
+
+
+		public void setCoche(Coche coche) {
+			this.coche = coche;
+		}
+
 
 
 
