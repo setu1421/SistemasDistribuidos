@@ -221,5 +221,17 @@ public class TablonController {
 	}
 	
 	
+	/*@RequestMapping("/login")
+	public String login(Model model,  @PathVariable long id) {
+		id = 2;
+		Usuario usuario = usuarioRepository.findOne(id);
+		usuario.setNombre(usuario.getNombre());
+		usuarioRepository.save(usuario);
+
+		return "confirmar_login";
+
+	}*/
+	
+	
 	
 }
