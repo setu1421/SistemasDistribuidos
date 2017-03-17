@@ -37,4 +37,4 @@
 > [Diagrama UML] (https://github.com/o0Pavel0o/SistemasDistribuidos/blob/master/UMLBuyCars.png)
 >
 >## Diagrama Entidad-Relacion
-> [Diagrama Entidad-Relación] (https://github.com/o0Pavel0o/SistemasDistribuidos/blob/master/Entidad_relacion.png)
+> [Diagrama Entidad-Relación] (https://github.com/o0Pavel0o/SistemasDistribuidos/blob/master/Entidad_relacion.png )
