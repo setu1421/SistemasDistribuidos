@@ -19,7 +19,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.authorizeRequests().antMatchers("/anuncio/{id}").permitAll();
         http.authorizeRequests().antMatchers("/comprar/{id}").permitAll();
         http.authorizeRequests().antMatchers("/vender/{id}").permitAll();
-        
+        http.authorizeRequests().antMatchers("/usuario/nuevo").permitAll();
         
 
         // Private pages (all other pages)
