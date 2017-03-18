@@ -1,7 +1,6 @@
 package o0pavel0o.buycars;
 
 import javax.annotation.PostConstruct;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
@@ -178,7 +177,7 @@ public class TablonController {
 		return "usuario_guardado";
 
 	}
-	
+		
 	
 	@RequestMapping("/comprar/{id}")
 	public String comprar(Model model, Compra compra, @PathVariable long id) {
@@ -218,18 +217,6 @@ public class TablonController {
 
 	}
 	
-	
-	/*@RequestMapping("/login{id}")
-	public String login(Model model,  @PathVariable long id) {
-		id = 2;
-		Usuario usuario = usuarioRepository.findOne(id);
-		usuario.setNombre(usuario.getNombre());
-		usuarioRepository.save(usuario);
 
-		return "confirmar_login";
-
-	}*/
-	
-	
 	
 }
