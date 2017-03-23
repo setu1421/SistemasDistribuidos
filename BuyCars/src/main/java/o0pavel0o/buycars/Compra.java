@@ -1,6 +1,6 @@
 package o0pavel0o.buycars;
 
-
+import o0pavel0o.buycars.*;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

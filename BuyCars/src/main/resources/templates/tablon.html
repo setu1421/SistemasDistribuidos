@@ -64,10 +64,13 @@
 					<p>
 						<a href="login.html" class="btn btn-primary">Login</a>
 						<a href="nuevoUsuario.html" class="btn btn-secondary">Nuevo usuario</a>
+						{{#user}}
 						<a href="nuevoAnuncio.html" class="btn btn-secondary">Nuevo anuncio</a>
 						<a href="nuevaCategoria.html" class="btn btn-secondary">Nueva categoría</a>
+						{{/user}}
 					</p>
 				</div>	
+				{{#admin}}
 				<div class="col-sm-4 py-4">
 					<h4 class="text-black">Estadísticas de base de datos</h4>
 					<ul class="list-unstyled">
@@ -77,6 +80,7 @@
 						<a href="#" class="text-black"> {{coches}} coches</a></li>
 					</ul>
 				</div>
+				{{/admin}}
 			</div>
 			<h1 class="jumbotron-heading">Anuncios disponibles</h1>
 			<div class="row">

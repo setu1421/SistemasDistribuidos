@@ -1,5 +1,6 @@
 package o0pavel0o.buycars;
 
+
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -20,11 +21,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.authorizeRequests().antMatchers("/comprar/{id}").permitAll();
         http.authorizeRequests().antMatchers("/vender/{id}").permitAll();
         http.authorizeRequests().antMatchers("/nuevoUsuario.html").permitAll();
-        http.authorizeRequests().antMatchers("/usuario/nuevo").permitAll();
+        http.authorizeRequests().antMatchers("/usuario/nuevoUs").permitAll();
         
 
         // Private pages (all other pages)
-        http.authorizeRequests().anyRequest().authenticated();
+    	http.authorizeRequests().antMatchers("/home").hasAnyRole("USER");
+    	http.authorizeRequests().antMatchers("/admin").hasAnyRole("ADMIN");
 
         // Login form
         http.formLogin().loginPage("/login");
@@ -41,8 +43,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         
-    	// User
+    	
         auth.inMemoryAuthentication().withUser("user").password("pass").roles("USER");
+        auth.inMemoryAuthentication().withUser("admin").password("admin").roles("USER", "ADMIN");
+       
     }
 
 }
