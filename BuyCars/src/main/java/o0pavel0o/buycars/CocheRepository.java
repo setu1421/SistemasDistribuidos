@@ -1,6 +1,8 @@
 package o0pavel0o.buycars;
 import o0pavel0o.buycars.*;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
@@ -9,6 +11,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface CocheRepository extends JpaRepository<Coche, Long>  {
 
 	Anuncio findByMatricula(String matricula);
+	List<Coche> findByMarca(String marca);
 
 	
 }
