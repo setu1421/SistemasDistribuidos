@@ -5,7 +5,20 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
+<style type ="text/css">
+#salir{
+float:right;
+}
+.container{
+position:relative;
+}
 
+#buscador{
+ position:absolute;
+ top:-4;
+ right:70;
+}
+</style>
 
 <title>BuyCars</title>
 
@@ -60,11 +73,24 @@
 
 
 		<div class="container">
+		<div id ="buscador">
+			   <form method=post action="/buscador"> 
+			    <fieldset> 
+			        <input type=hidden name=ie value=UTF-8 /> 
+			        <input type=hidden name=oe value=UTF-8 />                 
+			        <input type=text id="buscador" name="name" placeholder="Escribe la marca a buscar" value="" size="30" /> 
+			        <font size=-1>                  
+			        <INPUT type=submit name=btnG VALUE="Buscar" /> 
+			        </font> 
+			    </fieldset> 
+			    </form>
+		    </div>
 		<div class="row">
 				<div class="col-sm-8 py-4">	
 					<p>
 						<a href="login.html" class="btn btn-primary">Login</a>
 						<a href="nuevoUsuario.html" class="btn btn-secondary">Nuevo usuario</a>
+					    
 						{{#user}}
 						<a href="nuevoAnuncio.html" class="btn btn-secondary">Nuevo anuncio</a>
 						<a href="nuevaCategoria.html" class="btn btn-secondary">Nueva categoría</a>

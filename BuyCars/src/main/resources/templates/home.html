@@ -9,7 +9,15 @@
 <style type ="text/css">
 #salir{
 float:right;
+}
+.container{
+position:relative;
+}
 
+#buscador{
+ position:absolute;
+ top:-4;
+ right:70;
 }
 </style>
 <title>BuyCars</title>
@@ -26,10 +34,14 @@ float:right;
 </head>
 
 <body>
+   <script type="text/javascript">
+    alert("Bienvenido!");
+    </script>
+    
 	<div class="collapse bg-inverse" id="navbarHeader">
-	  <h1>Bienvenido!</h1>
+	 
 		<div class="container">
-
+         
 			<div class="row">
 				<div class="col-sm-8 py-4">
 					<h4 class="text-white">BuyCars</h4>
@@ -63,9 +75,22 @@ float:right;
 
 
 	<div class="album text-muted">
-
-
+    
+    
+    
 		<div class="container">
+		<div id ="buscador">
+			   <form method=GET action="/buscador"> 
+			    <fieldset> 
+			        <input type=hidden name=ie value=UTF-8 /> 
+			        <input type=hidden name=oe value=UTF-8 />                 
+			        <input type=text id="buscador" name="name" placeholder="Escribe la marca a buscar" value="" size="30" /> 
+			        <font size=-1>                  
+			        <INPUT type=submit name=btnG VALUE="Buscar" /> 
+			        </font> 
+			    </fieldset> 
+			    </form>
+		    </div>
 		<div class="row">
 				<div class="col-sm-8 py-4">	
 					<p>
