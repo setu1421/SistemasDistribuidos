@@ -2,15 +2,19 @@ package o0pavel0o.buycars;
 import o0pavel0o.buycars.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;
 
@@ -30,14 +34,12 @@ public class Usuario {
     private String email;
     private String telefono;
 	
+    private String password;
     
-	
+	@ElementCollection(fetch = FetchType.EAGER)
+    private List<String> roles;
     
-    
-    
-    
-
-
+   
 
 
 
@@ -50,14 +52,16 @@ public class Usuario {
 	
 
 
-	public Usuario(String nombre, int numAnuncios, String direccion, String email, String telefono) {
+	public Usuario(String nombre, String direccion, String email, String telefono,
+			String password, String... roles) {
 		
 		this.nombre = nombre;
-		this.numAnuncios = numAnuncios;
+		this.numAnuncios = 0;
 		this.direccion = direccion;
 		this.email = email;
 		this.telefono = telefono;
-		
+		this.password = new BCryptPasswordEncoder().encode(password);
+		this.roles = new ArrayList<>(Arrays.asList(roles));
 	
 	}
 
@@ -74,13 +78,9 @@ public class Usuario {
 
 
 
-
-
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
-
-
 
 
 
@@ -89,15 +89,9 @@ public class Usuario {
 	}
 
 
-
-
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-
-
 
 
 	public String getTelefono() {
@@ -105,22 +99,9 @@ public class Usuario {
 	}
 
 
-
-
-
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
-
-
-
-
-
-
-
-
-
-
 
 
 	public String getNombre() {
@@ -143,6 +124,29 @@ public class Usuario {
 		this.numAnuncios = numAnuncios;
 	}
 
+	
+	public void setPassword(String passwordHash) {
+		this.password =  new BCryptPasswordEncoder().encode(passwordHash);;
+	}
+
+
+	 public String getPassword() {
+			return password;
+		}
+
+
+	public List<String> getRoles() {
+		return roles;
+	}
+
+
+	public void setRoles(List<String> roles) {
+		this.roles = roles;
+	}
+
+
+    
+	
 
 
 
