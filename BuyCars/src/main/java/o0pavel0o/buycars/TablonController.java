@@ -2,6 +2,9 @@ package o0pavel0o.buycars;
 
 
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 
@@ -47,8 +50,9 @@ public class TablonController {
 	@PostConstruct
 	public void init() {
 		//Creo los usuarios Maria y Roberto
-		Usuario u1 = new Usuario("Maria",0,"cerca de casa","maria@gmail.com","678555999");
-		Usuario u2 = new Usuario("Roberto",0,"plaza abrantes","roberto@gmail.com","677455558");
+		Usuario u1 = new Usuario("Maria","cerca de casa","maria@gmail.com","678555999","1234","ROLE_USER");
+		Usuario admin = new Usuario("ADMIN","admin","admin@gmail.com","677415585","123456","ROLE_USER","ROLE_ADMIN");
+		Usuario u2 = new Usuario("Roberto","plaza abrantes","roberto@gmail.com","677455558","12345", "ROLE_USER");
 		//Creo 3 coches c1 y c2 pertenecen a Maria, c3 a Roberto
 		Coche c1 = new Coche("4422FGU", "BMW","320","diesel","rojo","250cv",100.000,5,25000.00);
 		Coche c2 = new Coche("5555FGU", "Audi","A5","diesel","azul","350cv",100.000,5,25000.00);
@@ -73,7 +77,7 @@ public class TablonController {
 		//Persisto los usuarios
 		usuarioRepository.save(u1);
 		usuarioRepository.save(u2);
-		
+		usuarioRepository.save(admin);
 		
         //Persito los coches de cada usuario
 		cocheRepository.save(c1);
@@ -146,6 +150,7 @@ public class TablonController {
 		return "tablon";
 	}
 
+	
 	@RequestMapping("/anuncio/nuevo")
 	public String nuevoAnuncio(Model model, Anuncio anuncio, Coche coche) {
 
@@ -180,14 +185,21 @@ public class TablonController {
 	
 	
 	@PostMapping("/usuario/nuevo")
-	public String nuevoUsuario(Model model, Usuario usuario) {
+	public String nuevoUsuario(Model model, Usuario usuario,HttpServletRequest request) {
 		
-	
-		
+		//Doy de alta un nuevo administrador, si estoy logado como administrador
+		if(request.isUserInRole("ADMIN")){
+			model.addAttribute("admin", request.isUserInRole("ADMIN"));
+			usuario.setRoles(new ArrayList<>(Arrays.asList("ROLE_USER","ROLE_ADMIN")));
+			usuarioRepository.save(usuario);
+		return "usuario_guardado";
+		//creo un nuevo usuario
+		}else{
+		usuario.setRoles(new ArrayList<>(Arrays.asList("ROLE_USER")));
 		usuarioRepository.save(usuario);
 		
 		return "usuario_guardado";
-
+		}
 	}
 	
 	  
@@ -229,6 +241,16 @@ public class TablonController {
 
 	}
 	
+	/** falta por codificar **
+	@RequestMapping("/Buscador")
+	public String getBuscador(Model model, @PathVariable String marca, Pageable page){
+		
+		Anuncio anuncio = repository.fin
+		model.addAttribute("anuncio", anuncio);
+
+		return "ver_anuncio";
+		
+	}**/
 
 	
 }
