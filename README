@@ -20,3 +20,8 @@
 >
 > ## Tablero Trello
 >  Enlace al [Tablero BuyCars:] (https://trello.com/invite/b/89zXO16r/06b870b346ef37954a5d89b8330a5326/sistemas-distribuidos)
+>## Instrucciones Azure
+> 1. Generar un certificado pem para acceder a la máquina virtual
+> 2. Crear la mv
+> 3. Accedemos a la mv 
+> 
