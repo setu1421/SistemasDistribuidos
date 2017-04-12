@@ -65,7 +65,7 @@
 >       7.2.5 mysql> exit; <br/>
 >     7.3 Comprobamos que tenemos acceso a la BBDD <br/>
 >       7.3.1 mysql -u renato -p buycars <br/>
-> 8. java -jar BuyCars-0.0.1-SNAPSHOT.jar <br/>
+> 8. Ejecutamos la aplicacióncon: java -jar BuyCars-0.0.1-SNAPSHOT.jar <br/>
 > 9. Accedemos a la aplicacón con **buycars.cloudapp.net**
 >
 >  
