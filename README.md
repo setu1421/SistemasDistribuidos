@@ -60,8 +60,8 @@
 > 7. Configuramos la BBDD accedemos como root <br/>
 >     7.1 mysql -u root -p <br/>
 >     7.2 Una vez dentro teclamos lo siguiente <br/>
->           7.2.1 mysql> create database buycars; <br/>
->           7.2.2 mysql> create user ‘renato’@’%’ identified by ‘123456’; <br/>
+>>           7.2.1 mysql> create database buycars; <br/>
+>>          7.2.2 mysql> create user ‘renato’@’%’ identified by ‘123456’; <br/>
 >           7.2.3 mysql> grant all privileges on buycars.* to ‘renato’@’%’ <br/>
 >           7.2.4 mysql> flush privileges; <br/>
 >           7.2.5 mysql> exit; <br/>
