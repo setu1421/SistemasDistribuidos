@@ -43,6 +43,6 @@
 > 1. Creamos un mv
 > 2. Creamos un certificado pem para acceder a la mv
 > 3. Accededmos a la mv utilizando las claves creados
->    ssh -i /path/to/azure.key azureuser@<ip>mv
+>     3.1 ssh -i /path/to/azure.key azureuser@<ip>mv <br/>
 > 4. Instalamos OpenJDK 8 JRE:
 > 5. 
