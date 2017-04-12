@@ -54,7 +54,7 @@
 >     5.3 comprobamos que tenemos acceso a MySQL con: mysql -u root -p<br/>
 > 6. Subimos el .jar de la aplicacion utilizando la sigueinte secuencia<br/>
 >     6.1 Nos situamos en la carpeta cd target <br/>
->     6.2 Subimoz el jar utilizando la clave privada:scp -i <clave privada azure> BuyCars-0.0.1-SNAPSHOT.jar azureuser@<ip >     >  vm>:/home/azureuser/ <br/>
+>     6.2 Subimoz el jar utilizando la clave privada:scp -i <clave privada azure> BuyCars-0.0.1-SNAPSHOT.jar azureuser@<ip >    vm>:/home/azureuser/ <br/>
 > 7. Configuramos la BBDD accedemos como root <br/>
 >     7.1 mysql -u root -p <br/>
 >     7.2 Una vez dentro teclamos lo siguiente <br/>
@@ -66,6 +66,6 @@
 >     7.3 Comprobamos que tenemos acceso a la BBDD <br/>
 >       7.3.1 mysql -u renato -p buycars <br/>
 > 8. java -jar BuyCars-0.0.1-SNAPSHOT.jar <br/>
-> 
-
+> 9. Accedemos a la aplicacón con **buycars.cloudapp.net**
+>
 >  
