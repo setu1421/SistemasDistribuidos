@@ -60,11 +60,11 @@
 > 7. Configuramos la BBDD accedemos como root <br/>
 >     7.1 mysql -u root -p <br/>
 >     7.2 Una vez dentro teclamos lo siguiente <br/>
-            7.2.1 mysql> create database buycars; <br/>
->           7.2.2 mysql> create user ‘renato’@’%’ identified by ‘123456’; <br/>
->           7.2.3 mysql> grant all privileges on buycars.* to ‘renato’@’%’ <br/>
->           7.2.4 mysql> flush privileges; <br/>
->           7.2.5 mysql> exit; <br/>
+>          >7.2.1 mysql> create database buycars; <br/>
+>          >7.2.2 mysql> create user ‘renato’@’%’ identified by ‘123456’; <br/>
+>          >7.2.3 mysql> grant all privileges on buycars.* to ‘renato’@’%’ <br/>
+>          >7.2.4 mysql> flush privileges; <br/>
+>          >7.2.5 mysql> exit; <br/>
 >     7.3 Comprobamos que tenemos acceso a la BBDD <br/>
 >           7.3.1 mysql -u renato -p buycars <br/>
 > 8. Ejecutamos la aplicacióncon: java -jar BuyCars-0.0.1-SNAPSHOT.jar <br/>
