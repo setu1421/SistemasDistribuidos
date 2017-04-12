@@ -40,9 +40,9 @@
 > [Diagrama Entidad-Relación] (https://github.com/o0Pavel0o/SistemasDistribuidos/blob/master/Entidad_relacion.png )
 >
 >## Instrucciones azure
-> 1. Creamos un mv
-> 2. Creamos un certificado pem para acceder a la mv
-> 3. Accededmos a la mv utilizando las claves creados, utilizamos el comando descrito abajo<br/>
+> 1. Creamos un certificado pem para acceder a la mv
+> 2. Creamos una mv en azure
+> 3. Accedemos a la mv utilizando las claves creadas<br/>
 >     3.1 ssh -i /path/to/azure.key azureuser@<ip mv> <br/>
 > 4. Instalamos OpenJDK 8 JRE: <br/>
 >     4.1 sudo add-apt-repository ppa:openjdk-r/ppa <br/>
@@ -52,9 +52,9 @@
 >     5.1 sudo apt-get update<br/>
 >     5.2 sudo apt-get install -y mysql-server<br/>
 >     5.3 comprobamos que tenemos acceso a MySQL con: mysql -u root -p<br/>
-> 6. Subimos el .jar de la aplicacion utilizando la sigueinte secuencia<br/>
+> 6. Subimos el .jar de la aplicacion utilizando la siguiente secuencia<br/>
 >     6.1 Nos situamos en la carpeta cd target <br/>
->     6.2 Subimoz el jar utilizando la clave privada:scp -i <clave privada azure> BuyCars-0.0.1-SNAPSHOT.jar azureuser@<ip >    vm>:/home/azureuser/ <br/>
+>     6.2 Subimos el jar utilizando la clave privada:scp -i <clave privada azure> BuyCars-0.0.1-SNAPSHOT.jar azureuser@<ip >    vm>:/home/azureuser/ <br/>
 > 7. Configuramos la BBDD accedemos como root <br/>
 >     7.1 mysql -u root -p <br/>
 >     7.2 Una vez dentro teclamos lo siguiente <br/>
