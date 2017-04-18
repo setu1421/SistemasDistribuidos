@@ -40,14 +40,14 @@
 > [Diagrama Entidad-Relación] (https://github.com/o0Pavel0o/SistemasDistribuidos/blob/master/Entidad_relacion.png )
 >
 >## Instrucciones azure
-> 1. Creamos un certificado pem para acceder a la mv
-> 2. Creamos una mv en azure
-> 3. Accedemos a la mv utilizando las claves creadas<br/>
->     3.1 ssh -i clave privada azureuser@ ip mv <br/>
-> 4. Instalamos OpenJDK 8 JRE: <br/>
->     4.1 sudo add-apt-repository ppa:openjdk-r/ppa <br/>
->     4.2 sudo apt-get update <br/>
->     4.3 sudo apt-get install openjdk-8-jre <br/>
+1. Creamos un certificado pem para acceder a la mv
+2. Creamos una mv en azure
+3. Accedemos a la mv utilizando las claves creadas<br/>
+>     3.1 ssh -i clave privada azureuser@ ip mv
+4. Instalamos OpenJDK 8 JRE: <br/>
+>            sudo add-apt-repository ppa:openjdk-r/ppa 
+>            sudo apt-get update 
+>            sudo apt-get install openjdk-8-jre 
  5. Instalamos MySql<br/>
 >            sudo apt-get update
 >            sudo apt-get install -y mysql-server
@@ -66,6 +66,6 @@
 >           mysql -u renato -p buycars <br/>
 9. Ejecutamos la aplicacióncon: 
 >           java -jar BuyCars-0.0.1-SNAPSHOT.jar 
-> 9. Accedemos a la aplicacón con **buycars.cloudapp.net**
+10. Accedemos a la aplicación con **buycars.cloudapp.net**
 >
 >  
