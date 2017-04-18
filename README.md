@@ -48,7 +48,7 @@
 >     4.1 sudo add-apt-repository ppa:openjdk-r/ppa <br/>
 >     4.2 sudo apt-get update <br/>
 >     4.3 sudo apt-get install openjdk-8-jre <br/>
-> 5. Instalamos MySql<br/>
+ 5. Instalamos MySql<br/>
       $ sudo apt-get update<br/>
       $ sudo apt-get install -y mysql-server<br/>
       $ comprobamos que tenemos acceso a MySQL con:<br/>
