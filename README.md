@@ -48,12 +48,12 @@
 >     4.1 sudo add-apt-repository ppa:openjdk-r/ppa <br/>
 >     4.2 sudo apt-get update <br/>
 >     4.3 sudo apt-get install openjdk-8-jre <br/>
-> 5. Instalamos MySql<br/>
+ 5. Instalamos MySql<br/>
 >            sudo apt-get update<br/>
 >            sudo apt-get install -y mysql-server<br/>
-> 6. comprobamos que tenemos acceso a MySQL con:<br/>
+ 6. comprobamos que tenemos acceso a MySQL con:<br/>
 >            mysql -u root -p<br/>
-> 6. Subimos el .jar de la aplicacion utilizando la siguiente secuencia<br/>
+ 6. Subimos el .jar de la aplicacion utilizando la siguiente secuencia<br/>
 >     6.1 Nos situamos en la carpeta cd target <br/>
 >     6.2 Subimos el jar utilizando la clave privada:<br/>
 >           6.2.1 scp -i "clave privada azure" BuyCars-0.0.1-SNAPSHOT.jar azureuser@ "ip vm":/home/azureuser/ <br/>
