@@ -51,7 +51,7 @@
  5. Instalamos MySql<br/>
 >            sudo apt-get update
 >            sudo apt-get install -y mysql-server
- 6. comprobamos que tenemos acceso a MySQL con:<br/>
+ 6. Comprobamos que tenemos acceso a MySql:<br/>
 >            mysql -u root -p
  7. Subimos el .jar para ello utilizamos la clave privada, escribiremos la siguiente secuencia<br/>
 >            scp -i "clave privada azure" BuyCars-0.0.1-SNAPSHOT.jar azureuser@ "ip vm":/home/azureuser/ 
@@ -64,8 +64,8 @@
 >           mysql> exit; 
  9. Comprobamos que tenemos acceso a la BBDD <br/>
 >           mysql -u renato -p buycars <br/>
-10. Ejecutamos la aplicacióncon: 
+10. Ejecutamos la aplicación: 
 >           java -jar BuyCars-0.0.1-SNAPSHOT.jar 
-11. Accedemos a la aplicación con **buycars.cloudapp.net**
+11. Accedemos a la aplicación tecleando en la barra de busqueda de tu navegador **buycars.cloudapp.net**
 >
 >  
