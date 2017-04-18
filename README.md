@@ -66,6 +66,6 @@
 >           mysql -u renato -p buycars <br/>
 10. Ejecutamos la aplicación: 
 >           java -jar BuyCars-0.0.1-SNAPSHOT.jar 
-11. Accedemos a la aplicación tecleando en la barra de busqueda de tu navegador **buycars.cloudapp.net** o **http://buycars2.cloudapp.net/**
+11. Accedemos a la aplicación tecleando en la barra de busqueda de tu navegador **buycars.cloudapp.net** o **https://buycars2.cloudapp.net/**
 >
 >  
