@@ -63,7 +63,7 @@
 >           mysql> flush privileges;
 >           mysql> exit; 
  9. Comprobamos que tenemos acceso a la BBDD <br/>
->           mysql -u renato -p buycars <br/>
+            mysql -u renato -p buycars <br/>
 10. Ejecutamos la aplicacióncon: 
 >           java -jar BuyCars-0.0.1-SNAPSHOT.jar 
 11. Accedemos a la aplicación con **buycars.cloudapp.net**
