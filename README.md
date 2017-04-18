@@ -49,9 +49,9 @@
 >     4.2 sudo apt-get update <br/>
 >     4.3 sudo apt-get install openjdk-8-jre <br/>
  5. Instalamos MySql<br/>
-       sudo apt-get update<br/>
-       sudo apt-get install -y mysql-server<br/>
-       comprobamos que tenemos acceso a MySQL con:<br/>
+            sudo apt-get update<br/>
+            sudo apt-get install -y mysql-server<br/>
+            comprobamos que tenemos acceso a MySQL con:<br/>
 >           5.3.1 mysql -u root -p<br/>
 > 6. Subimos el .jar de la aplicacion utilizando la siguiente secuencia<br/>
 >     6.1 Nos situamos en la carpeta cd target <br/>
