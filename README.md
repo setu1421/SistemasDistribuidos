@@ -68,7 +68,7 @@
 >           java -jar BuyCars-0.0.1-SNAPSHOT.jar 
 11. Accedemos a la aplicación tecleando en la barra de busqueda de tu navegador **https://buycars.cloudapp.net** o **https://buycars2.cloudapp.net/**
 >
-## Balanceo de carga
+## Balanceo de carga con ssl termination
 1. Instalamos haproxy:<br/>
 >          sudo apt-get update
 >          sudo apt-get install haproxy
@@ -80,17 +80,41 @@
 >     $ sudo openssl req -new -key /etc/ssl/xip.io/xip.io.key \ <br/>
 >                  -out /etc/ssl/xip.io/xip.io.csr<br/>
 >       Country Name (2 letter code) [AU]:US <br/>
->        State or Province Name (full name) [Some-State]:Connecticut<br/>
->          Locality Name (eg, city) []:New Haven<br/>
->                Organization Name (eg, company) [Internet Widgits Pty Ltd]:SFH<br/>
->           Organizational Unit Name (eg, section) []:<br/>
->         Common Name (e.g. server FQDN or YOUR name) []:*.xip.io<br/>
->         Email Address []:<br/>
-
->           Please enter the following 'extra' attributes to be sent with your certificate request<br/>
->          A challenge password []:<br/>
->          An optional company name []:<br/>
->         $ sudo openssl x509 -req -days 365 -in /etc/ssl/xip.io/xip.io.csr \<br/>
-                    -signkey /etc/ssl/xip.io/xip.io.key \<br/>
-                    -out /etc/ssl/xip.io/xip.io.crt<br/>
-
+>       State or Province Name (full name) [Some-State]:Connecticut<br/>
+>       Locality Name (eg, city) []:New Haven<br/>
+>       Organization Name (eg, company) [Internet Widgits Pty Ltd]:SFH<br/>
+>       Organizational Unit Name (eg, section) []:<br/>
+>       Common Name (e.g. server FQDN or YOUR name) []:*.xip.io<br/>
+>       Email Address []:<br/>
+>
+>       Please enter the following 'extra' attributes to be sent with your certificate request<br/>
+>       A challenge password []:<br/>
+>       An optional company name []:<br/>
+>       $ sudo openssl x509 -req -days 365 -in /etc/ssl/xip.io/xip.io.csr \<br/>
+>       -signkey /etc/ssl/xip.io/xip.io.key \<br/>
+>       -out /etc/ssl/xip.io/xip.io.crt<br/>
+4. Generamos el archivo pem
+>      $ sudo cat /etc/ssl/xip.io/xip.io.crt /etc/ssl/xip.io/xip.io.key \<br/>
+>          | sudo tee /etc/ssl/xip.io/xip.io.pem<br/>
+>
+5. Configuramos el frondend: conexiones http entrantes
+>       frontend www-http<br/>
+>       bind haproxy_www_public_IP:80<br/>
+>       reqadd X-Forwarded-Proto:\ http<br/>
+>       default_backend www-backend<br/>
+6. Configuramos la cx https entrantes
+>      frontend www-https<br/>
+>      bind haproxy_www_public_IP:443 ssl crt /etc/ssl/private/example.com.pem<br/>
+>      reqadd X-Forwarded-Proto:\ https<br/>
+>      default_backend www-backend<br/>
+>
+8. Configuramos el backend
+>     backend www-backend<br/>
+>     mode http<br/>
+>     balance roundrobin<br/>
+>     option forwardfor<br/>
+>     option httpchk HEAD / HTTP/1.1\r\nHost:localhost<br/>
+>     server web02 172.17.0.3:9001 check<br/>
+>     server web03 172.17.0.3:9002 check<br/>
+>     http-request set-header X-Forwarded-Port %[dst_port]<br/>  
+>     http-request add-header X-Forwarded-Proto https if { ssl_fc }<br/>
