@@ -119,7 +119,8 @@
 >     http-request set-header X-Forwarded-Port %[dst_port]<br/>  
 >     http-request add-header X-Forwarded-Proto https if { ssl_fc }<br/>
  ## Diagrama Infraestrucdtura Azure
-> [Diagrama Infraestrucdtura Azure] ()
+> [Diagrama Infraestrucdtura Azure] 
+<img src="https://github.com/o0Pavel0o/SistemasDistribuidos/blob/master/diagrama.jpg" width="1920" height="1080">
 
  ## Video funcionamiento aplicación y la infraestrucdtura Azure
 > [Video] ()
