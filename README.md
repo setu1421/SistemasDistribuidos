@@ -68,4 +68,9 @@
 >           java -jar BuyCars-0.0.1-SNAPSHOT.jar 
 11. Accedemos a la aplicación tecleando en la barra de busqueda de tu navegador **https://buycars.cloudapp.net** o **https://buycars2.cloudapp.net/**
 >
->  
+>## Balanceo de carga
+1. Instalamos haproxy:<br/>
+          sudo apt-get update
+          sudo apt-get install haproxy
+2. Configuramos haproxy <br/>
+    sudo vi /etc/haproxy/haproxy.cfg
