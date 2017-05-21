@@ -68,7 +68,7 @@
 >           java -jar BuyCars-0.0.1-SNAPSHOT.jar 
 11. Accedemos a la aplicación tecleando en la barra de busqueda de tu navegador **https://buycars.cloudapp.net** o **https://buycars2.cloudapp.net/**
 >
-## Balanceo de carga con ssl termination
+## Balanceo de carga con ssl termination con HAproxy
 1. Instalamos haproxy:<br/>
 >          sudo apt-get update
 >          sudo apt-get install haproxy
