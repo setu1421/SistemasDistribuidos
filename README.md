@@ -122,6 +122,9 @@
 > [Diagrama Infraestrucdtura Azure] 
 <img src="https://github.com/o0Pavel0o/SistemasDistribuidos/blob/master/diagrama.jpg" width="888" height="430">
 
- ## Video funcionamiento aplicación y la infraestrucdtura Azure
-> [Video] ()
+ ## Video funcionamiento aplicación
+<iframe src="https://player.vimeo.com/video/218383284" width="888" height="430" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/218383284">SD Funcionamiento aplicaci&oacute;n Spring</a> from <a href="https://vimeo.com/user66202915">Pablo EA</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+ ## Video infraestrucdtura Azure
 
