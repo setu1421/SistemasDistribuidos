@@ -73,7 +73,7 @@
 >          sudo apt-get update
 >          sudo apt-get install haproxy
 2. Configuramos haproxy <br/>
->    sudo vi /etc/haproxy/haproxy.cfg
+>        sudo vi /etc/haproxy/haproxy.cfg
 3. Generamos el certificado
 >     sudo mkdir /etc/ssl/xip.io <br/>
 >     $ sudo openssl genrsa -out /etc/ssl/xip.io/xip.io.key 1024<br/>
