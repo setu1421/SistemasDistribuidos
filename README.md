@@ -76,21 +76,21 @@
 >    sudo vi /etc/haproxy/haproxy.cfg
 3. Generamos el certificado
 >     sudo mkdir /etc/ssl/xip.io <br/>
->$ sudo openssl genrsa -out /etc/ssl/xip.io/xip.io.key 1024<br/>
->$ sudo openssl req -new -key /etc/ssl/xip.io/xip.io.key \ <br/>
- >                  -out /etc/ssl/xip.io/xip.io.csr<br/>
-> Country Name (2 letter code) [AU]:US <br/>
-> State or Province Name (full name) [Some-State]:Connecticut<br/>
-> Locality Name (eg, city) []:New Haven<br/>
-> Organization Name (eg, company) [Internet Widgits Pty Ltd]:SFH<br/>
-> Organizational Unit Name (eg, section) []:<br/>
-> Common Name (e.g. server FQDN or YOUR name) []:*.xip.io<br/>
-> Email Address []:<br/>
+>     $ sudo openssl genrsa -out /etc/ssl/xip.io/xip.io.key 1024<br/>
+>     $ sudo openssl req -new -key /etc/ssl/xip.io/xip.io.key \ <br/>
+>                  -out /etc/ssl/xip.io/xip.io.csr<br/>
+>       Country Name (2 letter code) [AU]:US <br/>
+>        State or Province Name (full name) [Some-State]:Connecticut<br/>
+>          Locality Name (eg, city) []:New Haven<br/>
+>                Organization Name (eg, company) [Internet Widgits Pty Ltd]:SFH<br/>
+>           Organizational Unit Name (eg, section) []:<br/>
+>         Common Name (e.g. server FQDN or YOUR name) []:*.xip.io<br/>
+>         Email Address []:<br/>
 
-> Please enter the following 'extra' attributes to be sent with your certificate request<br/>
-> A challenge password []:<br/>
-> An optional company name []:<br/>
->$ sudo openssl x509 -req -days 365 -in /etc/ssl/xip.io/xip.io.csr \<br/>
+>           Please enter the following 'extra' attributes to be sent with your certificate request<br/>
+>          A challenge password []:<br/>
+>          An optional company name []:<br/>
+>         $ sudo openssl x509 -req -days 365 -in /etc/ssl/xip.io/xip.io.csr \<br/>
                     -signkey /etc/ssl/xip.io/xip.io.key \<br/>
                     -out /etc/ssl/xip.io/xip.io.crt<br/>
 
