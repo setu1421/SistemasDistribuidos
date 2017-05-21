@@ -123,7 +123,7 @@
 <img src="https://github.com/o0Pavel0o/SistemasDistribuidos/blob/master/diagrama.jpg" width="888" height="430">
 
  ## Video funcionamiento aplicación
-> https://player.vimeo.com/video/218383284
+> https://vimeo.com/218383284
 
  ## Video infraestrucdtura Azure
 
