@@ -68,9 +68,29 @@
 >           java -jar BuyCars-0.0.1-SNAPSHOT.jar 
 11. Accedemos a la aplicación tecleando en la barra de busqueda de tu navegador **https://buycars.cloudapp.net** o **https://buycars2.cloudapp.net/**
 >
->## Balanceo de carga
+## Balanceo de carga
 1. Instalamos haproxy:<br/>
-          sudo apt-get update
-          sudo apt-get install haproxy
+>          sudo apt-get update
+>          sudo apt-get install haproxy
 2. Configuramos haproxy <br/>
-    sudo vi /etc/haproxy/haproxy.cfg
+>    sudo vi /etc/haproxy/haproxy.cfg
+3. Generamos el certificado
+>     sudo mkdir /etc/ssl/xip.io
+>$ sudo openssl genrsa -out /etc/ssl/xip.io/xip.io.key 1024
+>$ sudo openssl req -new -key /etc/ssl/xip.io/xip.io.key \
+ >                  -out /etc/ssl/xip.io/xip.io.csr
+> Country Name (2 letter code) [AU]:US
+> State or Province Name (full name) [Some-State]:Connecticut
+> Locality Name (eg, city) []:New Haven
+> Organization Name (eg, company) [Internet Widgits Pty Ltd]:SFH
+> Organizational Unit Name (eg, section) []:
+> Common Name (e.g. server FQDN or YOUR name) []:*.xip.io
+> Email Address []:
+
+> Please enter the following 'extra' attributes to be sent with your certificate request
+> A challenge password []:
+> An optional company name []:
+$ sudo openssl x509 -req -days 365 -in /etc/ssl/xip.io/xip.io.csr \
+                    -signkey /etc/ssl/xip.io/xip.io.key \
+                    -out /etc/ssl/xip.io/xip.io.crt
+>
