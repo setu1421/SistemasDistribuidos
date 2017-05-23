@@ -1,5 +1,7 @@
 package o0pavel0o.buycars;
 
+import java.util.List;
+
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
@@ -7,6 +9,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.domain.Pageable;
 
+
+import o0pavel0o.*;
 
 @CacheConfig(cacheNames="anuncios")
 public interface AnunciosRepository extends JpaRepository<Anuncio, Long> {
@@ -23,14 +27,16 @@ public interface AnunciosRepository extends JpaRepository<Anuncio, Long> {
 	
     
 	
-    @Cacheable
+	@Cacheable
 	Anuncio findById(Long id);
 	
-	@Cacheable
 	Anuncio findByAsunto(String asunto);
 	
 
 	Anuncio findByNombreAndAsunto(String nombre, String asunto);
+	
+	
+	
 	
 	
 }
