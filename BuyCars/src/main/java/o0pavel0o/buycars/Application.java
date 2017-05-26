@@ -56,12 +56,12 @@ public class Application {
 	        JoinConfig joinConfig = config.getNetworkConfig().getJoin();
             ArrayList<String> listaIp = new ArrayList<>();
             
-            listaIp.add("100.75.252.26");
-            listaIp.add("100.75.176.16");
-            listaIp.add("100.75.234.31");
+            listaIp.add("192.168.0.5");
+            listaIp.add("192.168.0.4");
+            //listaIp.add("100.");
 	        joinConfig.getMulticastConfig().setEnabled(false);
 	        joinConfig.getTcpIpConfig().setEnabled(true).setMembers(listaIp);
-	        
+	        //joinConfig.getTcpIpConfig().setEnabled(true).setMembers(Collections.singletonList("127.0.0.1"));
 	 
 	        return config ;
 	    }
