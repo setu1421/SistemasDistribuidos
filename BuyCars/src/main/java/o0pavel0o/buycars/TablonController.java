@@ -2,6 +2,11 @@ package o0pavel0o.buycars;
 
 
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -50,7 +55,7 @@ public class TablonController {
 	@PostConstruct
 	public void init() {
 		//Creo los usuarios Maria y Roberto
-		Usuario u1 = new Usuario("Maria","cerca de casa","maria@gmail.com","678555999","1234","ROLE_USER");
+		Usuario u1 = new Usuario("Maria","cerca de casa","renatoluzuriaga@gmail.com","678555999","1234","ROLE_USER");
 		Usuario admin = new Usuario("ADMIN","admin","admin@gmail.com","677415585","123456","ROLE_USER","ROLE_ADMIN");
 		Usuario u2 = new Usuario("Roberto","plaza abrantes","roberto@gmail.com","677455558","12345", "ROLE_USER");
 		//Creo 3 coches c1 y c2 pertenecen a Maria, c3 a Roberto
@@ -208,6 +213,11 @@ public class TablonController {
 		
 		Coche coche = cocheRepository.findOne(id);
 		Anuncio anuncio = repository.findOne(id);
+		String nombre = anuncio.getNombre();
+		
+		
+		Usuario usuario = usuarioRepository.findByNombre(nombre);
+		
 		
 		String fechaCompra = "11/03/2017";
 		compra.setCoche(coche);
@@ -217,8 +227,49 @@ public class TablonController {
 		compra.setVendedor(anuncio.getUsuario());
 		
 		compraRepository.save(compra);
+		
+		
+		 if ( usuario != null)
+		 {
+		 
+	
 
-		return "compra_guardada";
+			  try {
+				  
+			
+				  URL url = new URL("http://emailbuycars.cloudapp.net/" + usuario.getEmail() +   "/" + usuario.getNombre());
+					HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+					conn.setRequestMethod("GET");
+					conn.setRequestProperty("accept", "application/json");
+					InputStream connection = conn.getInputStream();
+					/*
+					 * if (conn.getResponseCode() != 200) {
+						throw new RuntimeException("Failed : HTTP error code : "
+								+ conn.getResponseCode());
+					}
+					*/
+					conn.disconnect();
+
+				  } catch (MalformedURLException e) {
+
+					e.printStackTrace();
+
+				  } catch (IOException e) {
+
+					e.printStackTrace();
+
+				  }
+			  return "compra_guardada";
+		 }else{
+			 
+			 
+			 return "email_ko";
+		 }
+		 
+		 
+		
+		
+
 
 	}
 	

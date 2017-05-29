@@ -48,7 +48,7 @@ public class Application {
 	  
 	  
 	  
-	  @Bean
+	 @Bean
 	    public Config config() {
 
 	        Config config = new Config();
@@ -56,9 +56,9 @@ public class Application {
 	        JoinConfig joinConfig = config.getNetworkConfig().getJoin();
             ArrayList<String> listaIp = new ArrayList<>();
             
-            listaIp.add("192.168.0.5");
-            listaIp.add("192.168.0.4");
-            //listaIp.add("100.");
+            listaIp.add("10.0.0.6");
+            listaIp.add("10.0.0.7");
+          
 	        joinConfig.getMulticastConfig().setEnabled(false);
 	        joinConfig.getTcpIpConfig().setEnabled(true).setMembers(listaIp);
 	        //joinConfig.getTcpIpConfig().setEnabled(true).setMembers(Collections.singletonList("127.0.0.1"));
