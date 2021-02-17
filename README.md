@@ -26,9 +26,6 @@
 >   * Email: or.luzuriaga@alumnos.urjc.es <br/>
 >   * Cuenta GitHub: orluzuriaga <br/>
 >
-> ## Tablero Trello
->  [Tablero BuyCars] (https://trello.com/invite/b/89zXO16r/06b870b346ef37954a5d89b8330a5326/sistemas-distribuidos)
->
 > ## Diagrama de navegacion
 >  [Diagrama de navegación] ( http://prezi.com/q3d9w2dci5w4/?utm_campaign=share&utm_medium=copy)  
 >
