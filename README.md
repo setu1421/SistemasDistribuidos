@@ -115,8 +115,8 @@
 >     server web03 172.17.0.3:9002 check<br/>
 >     http-request set-header X-Forwarded-Port %[dst_port]<br/>  
 >     http-request add-header X-Forwarded-Proto https if { ssl_fc }<br/>
- ## Diagrama Infraestrucdtura Azure
-> [Diagrama Infraestrucdtura Azure] 
+ ## Diagrama Infraestructura Azure
+> [Diagrama Infraestructura Azure] 
 <img src="https://github.com/o0Pavel0o/SistemasDistribuidos/blob/master/diagrama.jpg" width="888" height="430">
 
  ## Video funcionamiento aplicación
